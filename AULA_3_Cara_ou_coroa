@@ -1,10 +1,14 @@
 import random
 
-# lista com as opções
-opcoes = ["cara", "coroa"]
-
-# sorteia uma opção aleatória
-resultado = random.choice(opcoes)
-
-# mostra o resultado
-print("O resultado foi:", resultado)
+def double_letter(s): return ''.join([c*2 for c in s])
+    
+def secret_function(a,b):
+    if isinstance(a,int) and isinstance(b,int): return a+b
+    elif isinstance(a,str) and isinstance(b,str): return a+b
+    return "Tipos incompatíveis!"
+def cara_ou_coroa(): return random.choice(["cara","coroa"])
+def emoji(): 
+    lista = ['😀','😂','😎','😍','🤩','😜','🥶','🤖','👻','🐱','🐶','🦊','🐼','🐵','🐸','🐧','🐢','🦋','🌸','🌻','🍀','🍎','🍕','🍔','🍟','🍩','⚽','🏀','🎮','🎲','🎵','🚗','✈️','🚀','🌈','🌍','🔥','💧','🌪️','⭐','💥','🎉','🎁','💎','❤️','💀','👑','🧠','🕹️','🧩']
+    return random.choice(lista)
+jogo = input("Digite 'cara' para jogar cara ou coroa ou 'emoji' para sortear um emoji: ").lower()
+print("Resultado:", cara_ou_coroa() if jogo == "cara" else emoji())
