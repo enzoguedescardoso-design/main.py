@@ -1,0 +1,10 @@
+import random
+
+# lista com as opções
+opcoes = ["cara", "coroa"]
+
+# sorteia uma opção aleatória
+resultado = random.choice(opcoes)
+
+# mostra o resultado
+print("O resultado foi:", resultado)
